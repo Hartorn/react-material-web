@@ -29,6 +29,7 @@ config.addExternal('material-components-web', 'mdc');
 
 config.addExternal('@material/ripple', 'mdc.ripple');
 config.addExternal('@material/icon-toggle', 'mdc.iconToggle');
+config.addExternal('@material/dialog', 'mdc.dialog');
 
 // GESTION DES PLUGINS
 // Les fonctions seront résolues au moment de la création de la config webpack.
