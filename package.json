@@ -4,10 +4,10 @@
     "description": "Implementation of Material Design Lite for React",
     "main": "index.js",
     "scripts": {
-        "prepublish": "npm run babelify",
+        "prepare": "npm run build",
         "babelify": "better-npm-run babelify",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npm run babelify"
+        "build": "npm run babelify && better-npm-run build-dev && better-npm-run build-prod"
     },
     "repository": {
         "type": "git",
@@ -28,15 +28,21 @@
     "homepage": "https://github.com/Hartorn/react-material-web#readme",
     "dependencies": {
         "classnames": "2.2.5",
-        "lodash": "4.17.4",
-        "material-components-web": "0.12.1",
-        "prop-types": "15.5.10",
-        "react": "15.5.4",
-        "react-dom": "15.5.4"
+        "lodash": "4.17.4"
+    },
+    "peerDependencies": {
+        "material-components-web": "^0.13.0",
+        "prop-types": "^15.5.10",
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4"
     },
     "devDependencies": {
         "better-npm-run": "0.0.15",
         "eslint-config-focus": "0.5.0",
+        "material-components-web": "^0.13.0",
+        "prop-types": "^15.5.10",
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4",
         "webpack-focus": "0.13.0"
     },
     "betterScripts": {
@@ -46,6 +52,20 @@
                 "NODE_ENV": "production"
             },
             "command": "node scripts/babelify.js"
+        },
+        "build-dev": {
+            "env": {
+                "NODE_ENV": "dev"
+            },
+            "command": "webpack --progress"
+        },
+        "build-prod": {
+            "env": {
+                "NODE_ENV": "production",
+                "SOURCE_MAPS": "false",
+                "MINIMIFY": "true"
+            },
+            "command": "webpack --progress"
         }
     }
 }

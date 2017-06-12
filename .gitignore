@@ -65,3 +65,5 @@ typings/
 /components
 /utils
 /behaviours
+/dist
+/index.js
