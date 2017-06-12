@@ -28,7 +28,8 @@
     "homepage": "https://github.com/Hartorn/react-material-web#readme",
     "dependencies": {
         "classnames": "2.2.5",
-        "lodash": "4.17.4"
+        "lodash": "4.17.4",
+        "uuid": "3.0.1"
     },
     "peerDependencies": {
         "material-components-web": "^0.13.0",

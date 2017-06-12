@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import filterProps from '../../utils/filter-native-props';
 import ripple from '../../behaviours/ripple';
+import { translate } from '../../config';
 
 const displayName = 'Button';
 
@@ -37,7 +38,7 @@ class Fab extends PureComponent {
         });
 
         return (
-            <button ref='nativeCb' className={fabClass} aria-label={label} {...filterProps(others)}>
+            <button ref='nativeCb' className={fabClass} aria-label={translate(label)} {...filterProps(others) }>
                 <span className='mdc-fab__icon'>
                     {icon}
                 </span>

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import filterProps from '../../utils/filter-native-props';
 import ripple from '../../behaviours/ripple';
+import { translate } from '../../config';
 
 const displayName = 'Button';
 
@@ -45,7 +46,7 @@ class Button extends PureComponent {
 
         return (
             <button ref='nativeCb' className={btnClass} {...filterProps(others)}>
-                {label}
+                {translate(label)}
             </button>
         );
     }

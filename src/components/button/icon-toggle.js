@@ -5,7 +5,6 @@ import { isEqual } from 'lodash';
 import { MDCIconToggle } from '@material/icon-toggle';
 
 import filterProps from '../../utils/filter-native-props';
-// import ripple from '../../behaviours/ripple';
 
 const displayName = 'IconToggle';
 
@@ -84,7 +83,7 @@ class IconToggle extends PureComponent {
                 aria-label={label} tabIndex={disabled ? -1 : 0}
                 data-toggle-on={JSON.stringify(toggleOn)}
                 data-toggle-off={JSON.stringify(toggleOff)}
-                {...filterProps(others)}
+                {...filterProps(others) }
             >
                 {content}
             </i>
