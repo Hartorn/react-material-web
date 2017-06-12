@@ -1,0 +1,50 @@
+{
+    "name": "react-material-web",
+    "version": "0.0.1",
+    "description": "Implementation of Material Design Lite for React",
+    "main": "index.js",
+    "scripts": {
+        "prepublish": "npm run babelify",
+        "babelify": "better-npm-run babelify",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Hartorn/react-material-web.git"
+    },
+    "keywords": [
+        "material-components-web",
+        "mdc",
+        "react",
+        "material",
+        "material-design"
+    ],
+    "author": "Hartorn",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Hartorn/react-material-web/issues"
+    },
+    "homepage": "https://github.com/Hartorn/react-material-web#readme",
+    "dependencies": {
+        "classnames": "2.2.5",
+        "lodash": "4.17.4",
+        "material-components-web": "0.12.1",
+        "prop-types": "15.5.10",
+        "react": "15.5.4",
+        "react-dom": "15.5.4"
+    },
+    "devDependencies": {
+        "better-npm-run": "0.0.15",
+        "eslint-config-focus": "0.5.0",
+        "webpack-focus": "0.13.0"
+    },
+    "betterScripts": {
+        "babelify": {
+            "env": {
+                "BABEL_ENV": "production",
+                "NODE_ENV": "production"
+            },
+            "command": "node scripts/babelify.js"
+        }
+    }
+}
