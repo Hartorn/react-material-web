@@ -50,7 +50,7 @@ class IconToggle extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!isEqual(nextProps.toggleOn, this.props.toggleOn) || !isEqual(nextProps.toggleOn, this.props.toggleOn)) {
+        if (!isEqual(nextProps.toggleOn, this.props.toggleOn) || !isEqual(nextProps.toggleOff, this.props.toggleOff)) {
             this.iconToggle.foundation_.refreshToggleData();
         }
         if (nextProps.value !== this.props.value) {
@@ -83,7 +83,7 @@ class IconToggle extends PureComponent {
                 aria-label={label} tabIndex={disabled ? -1 : 0}
                 data-toggle-on={JSON.stringify(toggleOn)}
                 data-toggle-off={JSON.stringify(toggleOff)}
-                {...filterProps(others) }
+                {...filterProps(others)}
             >
                 {content}
             </i>
