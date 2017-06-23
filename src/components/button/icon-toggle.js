@@ -38,7 +38,7 @@ class IconToggle extends PureComponent {
     }
 
     componentDidMount() {
-        this.iconToggle = new MDCIconToggle(this.refs.nativeCb, this.iconToggleFoundation);
+        this.iconToggle = new MDCIconToggle(this.refs.nativeCb);
         this.iconToggle.foundation_.toggle(this.props.value);
         this.iconToggle.foundation_.setDisabled(this.props.disabled);
         this.iconToggle.listen('MDCIconToggle:change', this.handleToggle);
