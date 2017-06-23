@@ -1,0 +1,13 @@
+.select-manager > select.mdc-select {
+  display: none;
+}
+
+@media (max-width: 600px) and (pointer: coarse) {
+  .select-manager > .mdc-select[role="listbox"] {
+    display: none;
+  }
+
+  .select-manager > select.mdc-select {
+    display: block;
+  }
+}
